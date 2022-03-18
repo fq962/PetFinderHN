@@ -45,7 +45,11 @@ class _LoginScreenState extends State<LoginScreen> {
                       ),
                       filled: true,
                       hintStyle: const TextStyle(color: Colors.black54),
-                      hintText: "Usuario",
+                      label: const Text(
+                        'Usuario',
+                        style: TextStyle(fontSize: 12),
+                      ),
+                      //hintText: "Usuario",
                       fillColor: Colors.transparent,
                     ),
                   )),
@@ -63,17 +67,100 @@ class _LoginScreenState extends State<LoginScreen> {
                       ),
                       filled: true,
                       hintStyle: const TextStyle(color: Colors.black54),
-                      hintText: "Contraseña",
+                      label: const Text(
+                        'Contraseña',
+                        style: TextStyle(fontSize: 12),
+                      ),
+                      //hintText: "Contraseña",
                       fillColor: Colors.transparent,
                     ),
                   )),
             ),
-            const Padding(
-              padding: EdgeInsets.only(top: 8),
+            Padding(
+              padding: const EdgeInsets.only(top: 25),
+              child: Container(
+                decoration: BoxDecoration(
+                    color: const Color.fromRGBO(255, 179, 114, 0.65),
+                    borderRadius: BorderRadius.circular(20)),
+                height: 45,
+                width: 220,
+                //color: Colors.blueAccent,
+                child: TextButton(
+                    onPressed: () => {},
+                    child: const Text('Iniciar Sesion',
+                        style: TextStyle(
+                            color: Colors.black,
+                            fontSize: 12,
+                            fontWeight: FontWeight.bold))),
+              ),
+            ),
+            Padding(
+              padding: const EdgeInsets.only(top: 8),
               child: Center(
-                child: Text(
-                  '¿No tienes cuenta?. Registrate',
-                  style: TextStyle(fontSize: 10, fontWeight: FontWeight.bold),
+                child: TextButton(
+                  onPressed: () => showDialog<String>(
+                    context: context,
+                    builder: (BuildContext context) => AlertDialog(
+                      title: const Text('Tipo de Cuenta',
+                          style: TextStyle(
+                              fontSize: 12, fontWeight: FontWeight.bold)),
+                      content: SizedBox(
+                        height: 150,
+                        child: Column(
+                          children: <Widget>[
+                            Padding(
+                              padding: const EdgeInsets.all(10),
+                              child: Container(
+                                decoration: BoxDecoration(
+                                    color: const Color.fromRGBO(
+                                        255, 179, 114, 0.65),
+                                    borderRadius: BorderRadius.circular(20)),
+                                height: 45,
+                                width: 200,
+                                //color: Colors.blueAccent,
+                                child: TextButton(
+                                    onPressed: () {
+                                      Navigator.popAndPushNamed(
+                                          context, 'logup');
+                                    },
+                                    child: const Text('Usuario Normal',
+                                        style: TextStyle(
+                                            color: Colors.black,
+                                            fontSize: 10,
+                                            fontWeight: FontWeight.bold))),
+                              ),
+                            ),
+                            Padding(
+                              padding: const EdgeInsets.all(10),
+                              child: Container(
+                                decoration: BoxDecoration(
+                                    color: const Color.fromRGBO(
+                                        255, 179, 114, 0.65),
+                                    borderRadius: BorderRadius.circular(20)),
+                                height: 45,
+                                width: 200,
+                                //color: Colors.blueAccent,
+                                child: TextButton(
+                                    onPressed: () {},
+                                    child: const Text('Organizacion',
+                                        style: TextStyle(
+                                            color: Colors.black,
+                                            fontSize: 10,
+                                            fontWeight: FontWeight.bold))),
+                              ),
+                            ),
+                          ],
+                        ),
+                      ),
+                    ),
+                  ),
+                  child: const Text(
+                    '¿No tienes cuenta?. Registrate',
+                    style: TextStyle(
+                        color: Colors.black,
+                        fontSize: 9.5,
+                        fontWeight: FontWeight.bold),
+                  ),
                 ),
               ),
             )

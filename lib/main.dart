@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:pet_finder_hn/screens/login/login_screen.dart';
+import 'package:pet_finder_hn/screens/login/logup_screen.dart';
 
 void main() {
   runApp(const MyApp());
@@ -19,6 +20,7 @@ class MyApp extends StatelessWidget {
       initialRoute: 'login',
       routes: {
         'login': (_) => LoginScreen(),
+        'logup': (_) => LogUpScreen(),
       },
     );
   }
