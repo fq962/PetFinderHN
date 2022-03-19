@@ -89,6 +89,7 @@ class _LogUpScreenState extends State<LogUpScreen> {
                   decoration: InputDecoration(
                     icon: const Icon(Icons.date_range),
                     border: OutlineInputBorder(
+                      
                       borderRadius: BorderRadius.circular(10.0),
                     ),
                     filled: true,

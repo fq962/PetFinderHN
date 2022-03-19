@@ -10,6 +10,9 @@ class LoginScreen extends StatefulWidget {
 }
 
 class _LoginScreenState extends State<LoginScreen> {
+  final myController = TextEditingController();
+  final myControlle2 = TextEditingController();
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -52,6 +55,8 @@ class _LoginScreenState extends State<LoginScreen> {
                       //hintText: "Usuario",
                       fillColor: Colors.transparent,
                     ),
+                    controller: myController,
+                    // validator:,
                   )),
             ),
             Padding(
@@ -74,6 +79,7 @@ class _LoginScreenState extends State<LoginScreen> {
                       //hintText: "Contraseña",
                       fillColor: Colors.transparent,
                     ),
+                    controller: myControlle2,
                   )),
             ),
             Padding(
@@ -86,12 +92,33 @@ class _LoginScreenState extends State<LoginScreen> {
                 width: 220,
                 //color: Colors.blueAccent,
                 child: TextButton(
-                    onPressed: () => {},
-                    child: const Text('Iniciar Sesion',
-                        style: TextStyle(
-                            color: Colors.black,
-                            fontSize: 12,
-                            fontWeight: FontWeight.bold))),
+                    child: const Text(
+                      'Iniciar Sesion',
+                      style: TextStyle(
+                          color: Colors.black,
+                          fontSize: 12,
+                          fontWeight: FontWeight.bold),
+                    ),
+                    onPressed: () {
+                      debugPrint(myController.text);
+                      if (myController.text == 'fernandoq' &&
+                          myControlle2.text == '12345') {
+                        debugPrint('inicie sesion');
+                      } else {
+                        final snackBar = SnackBar(
+                          content: const Text(
+                            'Usuario o Contraseña Incorrecta',
+                            style: TextStyle(fontSize: 10),
+                          ),
+                          action: SnackBarAction(
+                            label: 'Listo',
+                            onPressed: () {},
+                          ),
+                        );
+
+                        ScaffoldMessenger.of(context).showSnackBar(snackBar);
+                      }
+                    }),
               ),
             ),
             Padding(
