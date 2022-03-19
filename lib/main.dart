@@ -1,4 +1,7 @@
+// ignore_for_file: prefer_const_constructors
+
 import 'package:flutter/material.dart';
+import 'package:pet_finder_hn/screens/home/home_screen.dart';
 import 'package:pet_finder_hn/screens/login/login_screen.dart';
 import 'package:pet_finder_hn/screens/login/logup_screen.dart';
 
@@ -17,10 +20,11 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      initialRoute: 'login',
+      initialRoute: 'homepage',
       routes: {
         'login': (_) => LoginScreen(),
         'logup': (_) => LogUpScreen(),
+        'homepage': (_) => HomePage(),
       },
     );
   }

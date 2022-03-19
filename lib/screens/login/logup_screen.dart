@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:date_time_picker/date_time_picker.dart';
 
 class LogUpScreen extends StatefulWidget {
-  LogUpScreen({Key? key}) : super(key: key);
+  const LogUpScreen({Key? key}) : super(key: key);
 
   @override
   State<LogUpScreen> createState() => _LogUpScreenState();
@@ -107,6 +107,7 @@ class _LogUpScreenState extends State<LogUpScreen> {
                         //print(val);
                         return null;
                       },
+                      // ignore: avoid_print
                       onSaved: (val) => print(val),
                     ),
                     //hintText: "Usuario",
