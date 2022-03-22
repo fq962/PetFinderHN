@@ -13,17 +13,17 @@ class _HomePageState extends State<HomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-          title: const Text('PetFinder'),
+          title: const Text('PetFinder', style: TextStyle(fontSize: 22),),
           centerTitle: true,
           backgroundColor: const Color.fromARGB(255, 179, 114, 1),
           leading: IconButton(icon: const Icon(Icons.menu), onPressed: () {})),
-      backgroundColor: Color.fromRGBO(255, 179, 114, 1),
+      backgroundColor: const Color.fromRGBO(255, 179, 114, 1),
       body: Column(children: <Widget>[
-        Container(
+        const SizedBox(
           width: 200,
           child: Center(
             child: Padding(
-              padding: const EdgeInsets.all(20),
+              padding: EdgeInsets.all(20),
               child: Text(
                 'Selecciona a tu mascota',
                 style: TextStyle(fontSize: 28),

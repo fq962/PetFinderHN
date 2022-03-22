@@ -14,12 +14,12 @@ class _LoginScreenState extends State<LoginScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: const Color.fromRGBO(255, 179, 114, 0.65),
+      backgroundColor: const Color.fromRGBO(255, 179, 114, 1),
       body: SingleChildScrollView(
         child: Column(
           children: <Widget>[
             Padding(
-              padding: const EdgeInsets.only(top: 50, bottom: 30),
+              padding: const EdgeInsets.only(top: 100, bottom: 40),
               child: Center(
                 child: SizedBox(
                   height: 200,
@@ -31,11 +31,11 @@ class _LoginScreenState extends State<LoginScreen> {
             const Center(
               child: Text(
                 'PetFinderHN',
-                style: TextStyle(fontSize: 22),
+                style: TextStyle(fontSize: 28),
               ),
             ),
             Padding(
-              padding: const EdgeInsets.only(top: 25),
+              padding: const EdgeInsets.only(top: 30),
               child: SizedBox(
                   width: 300,
                   height: 50,
@@ -48,7 +48,7 @@ class _LoginScreenState extends State<LoginScreen> {
                       hintStyle: const TextStyle(color: Colors.black54),
                       label: const Text(
                         'Usuario',
-                        style: TextStyle(fontSize: 12),
+                        style: TextStyle(fontSize: 18),
                       ),
                       //hintText: "Usuario",
                       fillColor: Colors.transparent,
@@ -72,7 +72,7 @@ class _LoginScreenState extends State<LoginScreen> {
                       hintStyle: const TextStyle(color: Colors.black54),
                       label: const Text(
                         'Contraseña',
-                        style: TextStyle(fontSize: 12),
+                        style: TextStyle(fontSize: 18),
                       ),
                       //hintText: "Contraseña",
                       fillColor: Colors.transparent,
@@ -84,7 +84,7 @@ class _LoginScreenState extends State<LoginScreen> {
               padding: const EdgeInsets.only(top: 25),
               child: Container(
                 decoration: BoxDecoration(
-                    color: const Color.fromRGBO(255, 179, 114, 0.65),
+                    color: const Color.fromRGBO(255, 228, 178, 1),
                     borderRadius: BorderRadius.circular(20)),
                 height: 45,
                 width: 220,
@@ -94,7 +94,7 @@ class _LoginScreenState extends State<LoginScreen> {
                       'Iniciar Sesion',
                       style: TextStyle(
                           color: Colors.black,
-                          fontSize: 12,
+                          fontSize: 18,
                           fontWeight: FontWeight.bold),
                     ),
                     onPressed: () {
@@ -129,7 +129,7 @@ class _LoginScreenState extends State<LoginScreen> {
                     builder: (BuildContext context) => AlertDialog(
                       title: const Text('Tipo de Cuenta',
                           style: TextStyle(
-                              fontSize: 12, fontWeight: FontWeight.bold)),
+                              fontSize: 18, fontWeight: FontWeight.bold)),
                       content: SizedBox(
                         height: 150,
                         child: Column(
@@ -152,7 +152,7 @@ class _LoginScreenState extends State<LoginScreen> {
                                     child: const Text('Usuario Normal',
                                         style: TextStyle(
                                             color: Colors.black,
-                                            fontSize: 10,
+                                            fontSize: 16,
                                             fontWeight: FontWeight.bold))),
                               ),
                             ),
@@ -171,7 +171,7 @@ class _LoginScreenState extends State<LoginScreen> {
                                     child: const Text('Organizacion',
                                         style: TextStyle(
                                             color: Colors.black,
-                                            fontSize: 10,
+                                            fontSize: 16,
                                             fontWeight: FontWeight.bold))),
                               ),
                             ),
@@ -181,10 +181,10 @@ class _LoginScreenState extends State<LoginScreen> {
                     ),
                   ),
                   child: const Text(
-                    '¿No tienes cuenta?. Registrate',
+                    '¿No tienes cuenta? Registrate',
                     style: TextStyle(
                         color: Colors.black,
-                        fontSize: 9.5,
+                        fontSize: 15,
                         fontWeight: FontWeight.bold),
                   ),
                 ),

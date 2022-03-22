@@ -12,14 +12,14 @@ class _LogUpScreenState extends State<LogUpScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: const Color.fromRGBO(255, 179, 114, 0.65),
+      backgroundColor: const Color.fromRGBO(255, 179, 114, 1),
       body: SingleChildScrollView(
         child: Column(
           children: <Widget>[
             Row(
               children: [
                 Padding(
-                  padding: const EdgeInsets.only(top: 50, bottom: 30, left: 40),
+                  padding: const EdgeInsets.only(top: 125, bottom: 25, left: 70),
                   child: Center(
                     child: SizedBox(
                       height: 80,
@@ -28,10 +28,13 @@ class _LogUpScreenState extends State<LogUpScreen> {
                     ),
                   ),
                 ),
-                const Center(
-                  child: Text(
-                    'PetFinderHN',
-                    style: TextStyle(fontSize: 22),
+                const Padding(
+                  padding: EdgeInsets.only(left: 10, top: 90),
+                  child: Center(
+                    child: Text(
+                      'PetFinderHN',
+                      style: TextStyle(fontSize: 28),
+                    ),
                   ),
                 ),
               ],
@@ -51,7 +54,7 @@ class _LogUpScreenState extends State<LogUpScreen> {
                       hintStyle: const TextStyle(color: Colors.black54),
                       label: const Text(
                         'Usuario',
-                        style: TextStyle(fontSize: 12),
+                        style: TextStyle(fontSize: 18),
                       ),
                       //hintText: "Usuario",
                       fillColor: Colors.transparent,
@@ -73,7 +76,7 @@ class _LogUpScreenState extends State<LogUpScreen> {
                       hintStyle: const TextStyle(color: Colors.black54),
                       label: const Text(
                         'Correo',
-                        style: TextStyle(fontSize: 12),
+                        style: TextStyle(fontSize: 18),
                       ),
                       //hintText: "Usuario",
                       fillColor: Colors.transparent,
@@ -95,7 +98,7 @@ class _LogUpScreenState extends State<LogUpScreen> {
                     filled: true,
                     hintStyle: const TextStyle(color: Colors.black54),
                     label: DateTimePicker(
-                      style: const TextStyle(fontSize: 11),
+                      style: const TextStyle(fontSize: 18),
                       //enabled: false,
                       //fieldLabelText: 'Fecha',
                       initialValue: '',
@@ -132,7 +135,7 @@ class _LogUpScreenState extends State<LogUpScreen> {
                       hintStyle: const TextStyle(color: Colors.black54),
                       label: const Text(
                         'Contraseña',
-                        style: TextStyle(fontSize: 12),
+                        style: TextStyle(fontSize: 18),
                       ),
                       //hintText: "Usuario",
                       fillColor: Colors.transparent,
@@ -143,7 +146,7 @@ class _LogUpScreenState extends State<LogUpScreen> {
               padding: const EdgeInsets.only(top: 25, bottom: 15),
               child: Container(
                 decoration: BoxDecoration(
-                    color: const Color.fromRGBO(255, 179, 114, 0.65),
+                    color: const Color.fromRGBO(255, 228, 178, 1),
                     borderRadius: BorderRadius.circular(20)),
                 height: 45,
                 width: 220,
@@ -153,7 +156,7 @@ class _LogUpScreenState extends State<LogUpScreen> {
                     child: const Text('Registrarse',
                         style: TextStyle(
                             color: Colors.black,
-                            fontSize: 12,
+                            fontSize: 18,
                             fontWeight: FontWeight.bold))),
               ),
             ),
@@ -166,7 +169,7 @@ class _LogUpScreenState extends State<LogUpScreen> {
                   },
                   child: const Text(
                     '¿Ya tienes cuenta?. Inicia Sesion',
-                    style: TextStyle(fontSize: 9.5, fontWeight: FontWeight.bold),
+                    style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
                   ),
                 ),
               ),
