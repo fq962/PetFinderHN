@@ -102,6 +102,7 @@ class _LoginScreenState extends State<LoginScreen> {
                       if (myController.text == 'fernandoq' &&
                           myControlle2.text == '12345') {
                         debugPrint('inicie sesion');
+                        Navigator.of(context).popAndPushNamed('homepage');
                       } else {
                         final snackBar = SnackBar(
                           content: const Text(

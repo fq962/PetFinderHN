@@ -20,7 +20,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      initialRoute: 'homepage',
+      initialRoute: 'login',
       routes: {
         'login': (_) => LoginScreen(),
         'logup': (_) => LogUpScreen(),
